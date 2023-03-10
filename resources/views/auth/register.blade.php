@@ -13,13 +13,13 @@
                 <div class="input-field" id="nameField">
                     <i class="fa-solid fa-user"></i>
                     <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Your Full name" />
-                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
                 </div>
+                <x-input-error :messages="$errors->get('name')" class="mt-2" style="color: #FF0000; font-size: 15px"/>
                 <div class="input-field">
                     <i class="fa-solid fa-envelope"></i>
                     <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" placeholder="Your Email address"/>
-                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
+                <x-input-error :messages="$errors->get('email')" class="mt-2" style="color: #FF0000; font-size: 15px"/>
                 <div class="input-field">
                     <i class="fa-solid fa-key"></i>
                     <x-text-input id="password" class="block mt-1 w-full" placeholder="Set a password"

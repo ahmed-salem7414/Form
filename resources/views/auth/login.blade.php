@@ -13,17 +13,17 @@
                 <div class="input-field">
                     <i class="fa-solid fa-envelope"></i>
                     <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="Your Email address" />
-                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
+                <x-input-error :messages="$errors->get('email')" class="mt-2" style="color: #FF0000; font-size: 15px"  />
                 <div class="input-field">
                     <i class="fa-solid fa-key"></i>
                     <x-text-input id="password" class="block mt-1 w-full" placeholder="Set a password"
                                   type="password"
                                   name="password"
                                   required autocomplete="current-password" />
-
-                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
+                <x-input-error :messages="$errors->get('password')" class="mt-2" style="color: #FF0000; font-size: 15px" />
+
                 @if (Route::has('password.request'))
                 <p>Forget password?<a href="{{ route('password.request') }}" >Click here!</a></p>
                 @endif
